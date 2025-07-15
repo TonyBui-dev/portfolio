@@ -181,6 +181,117 @@ body {
   justify-content: space-between;
 }
 
+.left-column .profile-info h1 {
+  font-size: 30px;
+  color: #ffd700;
+  transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 8px 4px rgba(0, 0, 0, 0.2);
+  /* cursor: pointer;  thay đổi con trỏ chuột thành biểu tượng bàn tay */
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column .profile-info h1:hover {
+  color: #ff6b6b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.2);
+}
+
+.left-column .profile-info a {
+  text-decoration: none;
+  color: inherit; /* kế thừa màu sắc từ h2 */
+}
+
+.left-column .profile-info h2 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.left-column .profile-info h2:hover {
+  color: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+.left-column .profile-info p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  /* text-align: justify; */
+  padding: 0.5rem 0;
+}
+
+.menu-links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.menu-links-element {
+  width: 150px;
+  height: 50px;
+  background: #0a2342;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu-links-element span {
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-links-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(#0ff 0deg, #0a2342 120deg, #0ff 240deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-links-element:hover {
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+.menu-links-element:hover::before {
+  opacity: 0.5;
+  transform: scale(2);
+}
+
 .center-column {
   flex: 2;
   background: rgba(255, 255, 255, 0.05);
@@ -214,4 +325,12 @@ body {
     opacity: 0;
     transform: translateY(100px) scale(0.6);
   }
+}
+
+/* center column */
+.center-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
