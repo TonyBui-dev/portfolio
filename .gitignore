@@ -1,0 +1,10 @@
+# node
+node_modules/
+dist/
+
+# log & system files
+*.log
+.DS_Store
+
+# VS Code
+.vscode/

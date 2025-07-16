@@ -1,3 +1,4 @@
+// Tạo ngôi sao
 let canCreateStar = true;
 
 document.addEventListener("mousemove", function (e) {
@@ -22,4 +23,23 @@ document.addEventListener("mousemove", function (e) {
   setTimeout(() => {
     canCreateStar = true;
   }, 80);
+});
+
+// Ẩn thanh navbar khi cuộn trang
+
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY) {
+    // Cuộn xuống
+    navbar.style.top = "-100px"; // Ẩn ra khỏi khung nhìn
+  } else {
+    // Cuộn lên
+    navbar.style.top = "0";
+  }
+
+  lastScrollY = currentScrollY;
 });
